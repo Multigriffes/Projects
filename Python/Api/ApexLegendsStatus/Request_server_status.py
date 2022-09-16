@@ -7,7 +7,7 @@ reponse_server_status = requests.get(url)
 
 if reponse_server_status.status_code == 200:
     fp.write(reponse_server_status.text)
-    print("Reponse written in a txt file")
+    print("Reponse written in a json file")
 elif reponse_server_status.status_code == 400:
     fp.write("Try again in a few minute")
     print("Try again in a few minute")
