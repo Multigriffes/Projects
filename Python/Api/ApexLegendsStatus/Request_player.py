@@ -1,10 +1,11 @@
 import requests
 import os
 
+key = input("Your API key")
 plateform = input("La plateform (PC,X1(for xbox),PS4)")
 player = input("Le joueur (Name of the player)")
 fp = open(player + plateform + ".json", "w", encoding="utf-8", newline="\n")
-url = ("https://api.mozambiquehe.re/bridge?auth=95f0efbc14fc27681790be9963d1b212&player=" + (player) + "&platform=" + (plateform) + "&enableClubsBeta=true&merge=true")
+url = ("https://api.mozambiquehe.re/bridge?auth=" + (key) + "&player=" + (player) + "&platform=" + (plateform) + "&enableClubsBeta=true&merge=true")
 reponse_player = requests.get(url)
 
 if reponse_player.status_code == 200:

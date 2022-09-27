@@ -1,8 +1,9 @@
 import requests
 import os
 
+key = input("Your API key")
 fp = open("Preda.json", "w", encoding="utf-8", newline="\n")
-url = ("https://api.mozambiquehe.re/predator?auth=95f0efbc14fc27681790be9963d1b212")
+url = ("https://api.mozambiquehe.re/predator?auth=" + (key))
 reponse_preda = requests.get(url)
 
 if reponse_preda.status_code == 200:

@@ -1,8 +1,9 @@
 import requests
 import os
 
+key = input("Your API key")
 fp = open("Current map rotation.json", "w", encoding="utf-8", newline="\n")
-url = ("https://api.mozambiquehe.re/maprotation?auth=95f0efbc14fc27681790be9963d1b212")
+url = ("https://api.mozambiquehe.re/maprotation?auth=" + (key))
 reponse_map = requests.get(url)
 
 if reponse_map.status_code == 200:

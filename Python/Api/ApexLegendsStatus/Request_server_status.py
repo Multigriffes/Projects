@@ -1,8 +1,9 @@
 import requests
 import os
 
+key = input("Your API key")
 fp = open("Current server status.json", "w", encoding="utf-8", newline="\n")
-url = ("https://api.mozambiquehe.re/servers?auth=95f0efbc14fc27681790be9963d1b212")
+url = ("https://api.mozambiquehe.re/servers?auth=" + (key))
 reponse_server_status = requests.get(url)
 
 if reponse_server_status.status_code == 200:

@@ -1,10 +1,11 @@
 import requests
 import os
 
+key = input("Your API key")
 plateform = input("La plateform (PC,X1(for xbox),PS4)")
 player = input("Le joueur (Name of the player)")
 fp = open("UID " + player + plateform + ".json", "w", encoding="utf-8", newline="\n")
-url = ("https://api.mozambiquehe.re/nametouid?auth=95f0efbc14fc27681790be9963d1b212&player=" + (player) + "&platform=" + (plateform))
+url = ("https://api.mozambiquehe.re/nametouid?auth=" + (key) + "&player=" + (player) + "&platform=" + (plateform))
 reponse_nametouid = requests.get(url)
 
 if reponse_nametouid.status_code == 200:
