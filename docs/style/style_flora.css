@@ -1,0 +1,53 @@
+body, div {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: lightskyblue;
+	font-family: Comic Sans Ms;
+	font-size: 15px;
+	margin-left: 20px;
+}
+img { 
+	float: center;
+}
+th { width: 200px;}
+ul { list-style-type: square; }
+
+
+#entete-de-page {
+	padding: 5px;
+	height: 10x;
+	background-color:lightskyblue;
+	font-size: 25px;
+	font-weight: bold;
+	font-variant: small-caps;
+	text-align: center;
+	background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../image/Annuaire.jpeg);
+ 	color: rgb(112, 24, 24);
+}
+#bloc-menu {
+	height: 50px;
+	background-color: lightgray;
+	margin-top: 1px;
+    margin-bottom: 1px;
+    margin-inline: auto;
+}
+#contenu {
+	padding: 10px;
+	background-color: lightskyblue;
+}
+#infos {
+	color: darkblue;
+	font-style: italic;
+}
+#pied-de-page {
+	padding: 5px;
+	background-color: lightskyblue;
+	font-size: 11px;
+	margin-left: 10px;
+}
+
+	

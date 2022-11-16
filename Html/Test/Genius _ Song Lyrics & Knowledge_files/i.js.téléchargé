@@ -1,0 +1,41 @@
+(function() { function bxBootstrap() {
+	var re = /bot|crawl|slurp|spider|mediapartners|headlesschrome|snap-prefetch|remotasks|woorank|uptime\.com|facebookexternalhit|facebookcatalog/i;
+	if (re.test(navigator.userAgent) || navigator.userAgent == '') {
+		return;
+	}
+
+	if (!(window.bouncex&&bouncex.website)) {
+		var pushedData = [];
+		if(window.bouncex && bouncex.push && bouncex.length){
+			pushedData = bouncex;
+		}
+		window.bouncex = {};
+		bouncex.pushedData = pushedData;
+		bouncex.website = {"id":5453,"name":"MediaLab | Genius","cookie_name":"bounceClientVisit5453","domain":"genius.com","ct":"bind_to_domain","ally":0,"ei":0,"tcjs":"","cjs":"","force_https":false,"waypoints":false,"content_width":900,"gai":"","swids":"","sd":0,"ljq":"auto","campaign_id":0,"is_preview":false,"aco":{"first_party_limit":"3500","local_storage":"1"},"cmp":{"gdpr":0,"gmp":0,"whitelist_check":0},"burls":[],"ple":false,"fbe":true,"mas":2,"map":1,"gar":true,"ete":2,"ettm":true,"etjs":"","dge":false,"bxidLoadFirst":false,"pie":false,"cme":false,"gbi_enabled":1,"gbi":{"rblocks":[6137587372,6111921311,6111109891,6129733378,6136593725,6111109894,6113480042,6146587111,6091909898,6140025002,6136593728,5946914293,6142088048,6107736844,6091909877,5946916933,6140026079,6142819814,6141068064,6134271795,6144413519,6109701495]},"bpush":false,"pt":null,"els":{},"vars":[{"name":"dfp_rblock","polling":"all","persist":"no","page_types":[],"testmode":false,"default":"false","code":"(function() {\n    if (!bouncex.dfpRan) {\n        bouncex.dfpRan = true;\n        return 'not_ready';\n    }\n    function check() {\n        bouncex.dfp_loaded = false || bouncex.dfp_loaded;\n\n        var event = bouncex.gbi2.getDfpEndPageViewEvent();\n\n        if (event && event.dfp_status) {\n            if (event.dfp_status === 'pending') {\n                return 'not_ready';\n            }\n\n            bouncex.dfp_loaded = true;\n\n            if (event.dfp_status === 'suppressed') {\n                return 'sponsor';\n            }\n            return 'allow';\n        }\n\n        return 'not_ready';\n    }\n\n    if (bouncex.website.gbi.rblocks) {\n        if (bouncex.dfp_loaded) {\n            return null;\n        } else if (window.googletag && window.googletag.apiReady && window.googletag.pubadsReady && bouncex.gbi2) {\n            return check();\n        } else if (typeof window.googletag === 'undefined') {\n            return 'no_googletag';\n        }\n        return 'fallback';\n    } else {\n        return 'not_ready';\n    }\n})();","trigger":"pageload"},{"name":"video_present","polling":"none","persist":"no","page_types":[],"testmode":false,"default":"false","code":"document.querySelectorAll('.video_page').length > 0;","trigger":"pageload"}],"dgu":"pixel.cdnwidget.com","dgp":false,"ba":{"enabled":1,"fbte":0},"biu":"assets.bounceexchange.com","bau":"api.bounceexchange.com","beu":"events.bouncex.net","ibx":{"tjs":"","cjs":"","miw":0,"mibcx":1,"te":0,"cart_rep":{"get":"","set":""},"ulpj":null,"cus":"","miw_exclude":"","enabled":0},"etjson":null,"osre":true,"osru":"osr.bounceexchange.com/v1/osr/items","checkDfp":true,"spa":0,"spatm":1,"preinit_cjs":"","mat":0,"math":0,"cpnu":"coupons.bounceexchange.com","dfpcms":0,"sms":{"optm":"","eventSharing":false,"shqId":"","enabled":0},"pde":false,"fme":false,"fmx":"","sdk":{"android":{"enabled":false,"enabledVersions":[]},"ios":{"enabled":false,"enabledVersions":[]}},"onsite":{"enabled":1},"ads":{"enabled":1}}
+;
+		bouncex.tag = 'tag3';
+		bouncex.$ = window.jQuery;
+		bouncex.env = 'production';
+		bouncex.restrictedTlds = {"casl":{"ca":1},"gdpr":{"ad":1,"al":1,"at":1,"ax":1,"ba":1,"be":1,"bg":1,"by":1,"xn--90ais":1,"ch":1,"cy":1,"cz":1,"de":1,"dk":1,"ee":1,"es":1,"eu":1,"fi":1,"fo":1,"fr":1,"uk":1,"gb":1,"gg":1,"gi":1,"gr":1,"hr":1,"hu":1,"ie":1,"im":1,"is":1,"it":1,"je":1,"li":1,"lt":1,"lu":1,"lv":1,"mc":1,"md":1,"me":1,"mk":1,"xn--d1al":1,"mt":1,"nl":1,"no":1,"pl":1,"pt":1,"ro":1,"rs":1,"xn--90a3ac":1,"ru":1,"su":1,"xn--p1ai":1,"se":1,"si":1,"sj":1,"sk":1,"sm":1,"ua":1,"xn--j1amh":1,"va":1,"tr":1}};
+		bouncex.client = {
+			supportsBrotli: 1
+		};
+		bouncex.assets = {"ads":"60c9a022d566ede7553cc9d60535ea6d","creativesBaseStyles":"96663738","inbox":"ff39b67feb7efb3b74df724f531434eb","onsite":"7b7ad9585fbe78de250b9a262619c688","sms":"86056d83ce894418ac022cce51fe93b8"};
+		bouncex.push = function(pushData) {
+			bouncex.pushedData.push(pushData);
+		}
+		var script = document.createElement('script');
+		script.setAttribute('src', '//assets.bounceexchange.com/assets/smart-tag/versioned/main_6b4fa43bedbfef6b9dbf56679c972d65.br.js');
+		script.setAttribute('async', 'async');
+
+		document.body.appendChild(script);
+	}
+
+
+
+}
+if (document.readyState === "loading") {
+	document.addEventListener("DOMContentLoaded", bxBootstrap);
+} else {
+	bxBootstrap();
+}})();
