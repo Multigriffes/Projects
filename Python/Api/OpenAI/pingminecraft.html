@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Minecraft Server Ping</title>
+  </head>
+  <body>
+    <h1>Minecraft Server Ping</h1>
+    <form>
+      <label for="server_ip">Server IP:</label><br>
+      <input type="text" id="server_ip" name="server_ip"><br>
+      <input type="submit" value="Ping Server">
+    </form>
+    <div id="ping_result"></div>
+    <script>
+      // Add event listener for form submission
+      document.querySelector('form').addEventListener('submit', function(event) {
+        // Prevent the form from being submitted
+        event.preventDefault();
+
+        // Get the server IP from the input field
+        var serverIP = document.getElementById('server_ip').value;
+
+        // Make a GET request to the ping endpoint
+        fetch('https://minecraft-server-ping.herokuapp.com/ping?ip=' + serverIP)
+          .then(function(response) {
+            // Parse the response as JSON
+            return response.json();
+          })
+          .then(function(data) {
+            // Check the response type
+            if (data.type === 'ping_result') {
+              // If the response is a ping result, display the server information
+              document.getElementById('ping_result').innerHTML = '<p>Server Name: ' + data.server.name + '</p><p>Server Version: ' + data.server.version + '</p><p>Server Protocol: ' + data.server.protocol + '</p><p>Players Online: ' + data.server.players.online + ' / ' + data.server.players.max + '</p>';
+            } else if (data.type === 'error') {
+              // If the response is an error, display the error message
+              document.getElementById('ping_result').innerHTML = '<p>Error: ' + data.message + '</p>';
+            }
+          });
+      });
+    </script>
+  </body>
+</html>
