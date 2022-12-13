@@ -1,5 +1,4 @@
 import requests
-import os
 
 key = input("Your API key")
 fp = open("Current server status.json", "w", encoding="utf-8", newline="\n")
