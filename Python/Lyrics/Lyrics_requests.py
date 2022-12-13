@@ -1,6 +1,5 @@
 import linecache
 import requests
-import os
 to_delete = '  <!----><mini-song-card object="$ctrl.hit.result" ng-switch-when="song" search-highlights="$ctrl.hit.highlights"><a ng-href="'
 heu = 1
 

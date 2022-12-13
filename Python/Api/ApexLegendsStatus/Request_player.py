@@ -1,5 +1,4 @@
 import requests
-import os
 
 key = input("Your API key")
 plateform = input("La plateform (PC,X1(for xbox),PS4)")
