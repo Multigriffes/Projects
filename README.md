@@ -1,3 +1,5 @@
+PROJECT NOW IN SEPERATE REPOT / THIS REPOT IS NO MORE UPDATED
+
 I'm a teenager in middle school.
 That's "all" my actual projects.
 I want to learn a lot about everything
